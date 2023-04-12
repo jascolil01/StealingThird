@@ -1,3 +1,9 @@
+:root {
+  --background-color: #e9c893;
+  --img-size: 300px;
+  --img-background: #3cc47c;
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
@@ -23,8 +29,41 @@ a:hover {
 }
 
 body {
-  background-color: #e9c893;
+  background-color: var(--background-color);
   color: #828081;
   text-align: center;
   font-family: 'Raleway', sans-serif;
+}
+
+.about {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  height: 100vh;
+  align-items: center;
+}
+
+.drums,
+.singer,
+.guitar,
+.bass {
+  background-color: var(--background-color);
+  width: var(--img-size);
+  height: var(--img-size);
+  padding: 20px;
+  border-radius: 70px;
+  margin: 40px;
+}
+
+
+
+
+.drums:hover,
+.singer:hover,
+.guitar:hover,
+.bass:hover {
+  transition: .3s;
+  border-radius: 70px;
+  box-shadow: 0 0 20px var(--img-background), 0 0 40px var(--img-background), 0 0 60px var(--img-background), 0 0 80px var(--img-background);
+  background-color: var(--img-background);
 }
