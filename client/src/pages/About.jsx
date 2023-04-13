@@ -1,4 +1,11 @@
+import Drums from "../components/Drums"
+import Bass from "../components/Bass"
+import Singer from "../components/Singer"
+import Guitar from "../components/Guitar"
+
 export default function About() {
+
+  let drum = false
 
   const handleClick = () => {
     console.log('nice')
@@ -35,6 +42,7 @@ export default function About() {
           <span></span>
           <img src="https://i.imgur.com/krcbEPd.png" alt="guitar" className="guitar" />
         </div>
+        <div>{drum ? <Drums /> : <Click />}</div>
       </div>
     </div>
   )
