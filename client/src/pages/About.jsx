@@ -3,14 +3,22 @@ import Bass from "../components/Bass"
 import Singer from "../components/Singer"
 import Guitar from "../components/Guitar"
 import Click from "../components/Click"
+import { useNavigate } from "react-router-dom";
 
 export default function About() {
 
-  let drum = false
-  let singer = true
+  const navigate = useNavigate()
 
   const handleClick = (x) => {
-    console.log('nice', x)
+    if (x === 1) {
+      navigate('/Bass')
+    } else if (x === 2) {
+      navigate('/Drums')
+    } else if (x === 3) {
+      navigate('/Singer')
+    } else {
+      navigate('/Guitar')
+    }
   }
   return (
     <div>
