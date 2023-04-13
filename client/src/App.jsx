@@ -1,5 +1,6 @@
 // import { useState } from 'react'
 import './App.css'
+import sound from './assets/Recording.wav'
 import Home from './pages/ Home'
 import Merch from './pages/ Merch'
 import SetList from './pages/ SetList'
@@ -14,8 +15,13 @@ import { Route, Routes } from 'react-router-dom';
 function App() {
   // const [count, setCount] = useState(0)
 
+  function play() {
+    new Audio(sound).play()
+  }
+
   return (
     <div className="App">
+      <button onClick={play}>Play one of our covers!</button>
       <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
