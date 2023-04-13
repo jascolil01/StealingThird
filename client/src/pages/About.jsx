@@ -1,8 +1,3 @@
-import Drums from "../components/Drums"
-import Bass from "../components/Bass"
-import Singer from "../components/Singer"
-import Guitar from "../components/Guitar"
-import Click from "../components/Click"
 import { useNavigate } from "react-router-dom";
 
 export default function About() {
@@ -16,7 +11,7 @@ export default function About() {
       navigate('/Drums')
     } else if (x === 3) {
       navigate('/Singer')
-    } else {
+    } else if (x === 4) {
       navigate('/Guitar')
     }
   }
