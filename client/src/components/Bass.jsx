@@ -1,4 +1,11 @@
+import { useNavigate } from 'react-router-dom'
 export default function Bass() {
+
+  const navigate = useNavigate()
+
+  const handleGoBack = () => {
+    navigate('/About')
+  }
   return (
     <div>
       <img src="" alt='profile pic' />
@@ -9,6 +16,7 @@ export default function Bass() {
       <h1>Contact Information</h1>
       <h2>Email</h2>
       <h3><a href='mailto:josh.ascolillo@gmail.com'>fadsasd</a></h3>
+      <div onClick={handleGoBack}>Go Back</div>
     </div>
   )
 }
