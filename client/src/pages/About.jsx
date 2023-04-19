@@ -1,18 +1,38 @@
-import { useNavigate } from "react-router-dom";
+import Drums from '../components/Drums'
+import Bass from '../components/Bass'
+import Singer from '../components/Singer'
+import Guitar from '../components/Guitar'
+import { useState, useEffect } from "react";
 
 export default function About() {
 
-  const navigate = useNavigate()
+  const [drum, setDrum] = useState(false)
+  const [singer, setSinger] = useState(false)
+  const [guitar, setGuitar] = useState(false)
+  const [bass, setBass] = useState(false)
+
 
   const handleClick = (x) => {
     if (x === 1) {
-      navigate('/Bass')
+      setBass((current) => !current)
+      setDrum(false)
+      setGuitar(false)
+      setSinger(false)
     } else if (x === 2) {
-      navigate('/Drums')
+      setBass(false)
+      setDrum((current) => !current)
+      setGuitar(false)
+      setSinger(false)
     } else if (x === 3) {
-      navigate('/Singer')
+      setBass(false)
+      setDrum(false)
+      setGuitar(false)
+      setSinger((current) => !current)
     } else if (x === 4) {
-      navigate('/Guitar')
+      setBass(false)
+      setDrum(false)
+      setGuitar((current) => !current)
+      setSinger(false)
     }
   }
   return (
@@ -47,6 +67,16 @@ export default function About() {
           <span></span>
           <img src="https://i.imgur.com/krcbEPd.png" alt="guitar" className="guitar" />
         </div>
+        <div className="member">{
+          drum ? (
+            <Drums />
+          ) : guitar ? (
+            <Guitar />
+          ) : bass ? (<Bass />)
+            : singer ? (<Singer />) : (
+              <h1>Click on an icon to see each member</h1>
+            )
+        }</div>
       </div>
     </div>
   )
