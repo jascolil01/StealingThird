@@ -59,7 +59,7 @@ body {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
-  border-radius: 100px;
+  border-radius: 80px;
   overflow: hidden;
   transition: 0.2s;
 }
@@ -139,12 +139,12 @@ body {
   height: fit-content;
   width: 300px;
   background-image: linear-gradient(to bottom, var(--three-background), var(--two-background));
-  border-radius: 100px;
+  border-radius: 20px 80px 20px 80px;
 }
 
 .member img {
   height: 30vh;
   width: 30vh;
-  border-radius: 200px;
+  border-radius: 100px;
   border: 2px solid black
 }
