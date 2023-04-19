@@ -53,6 +53,16 @@ export default function About() {
           <span></span>
           <img src="https://cdn-icons-png.flaticon.com/512/92/92997.png" alt="drums" className="drums" />
         </div>
+        <div className="member">{
+          drum ? (
+            <Drums />
+          ) : guitar ? (
+            <Guitar />
+          ) : bass ? (<Bass />)
+            : singer ? (<Singer />) : (
+              <h1>Click on an icon to see each member</h1>
+            )
+        }</div>
         <div onClick={() => handleClick(3)} className="test">
           <span></span>
           <span></span>
@@ -67,16 +77,6 @@ export default function About() {
           <span></span>
           <img src="https://i.imgur.com/krcbEPd.png" alt="guitar" className="guitar" />
         </div>
-        <div className="member">{
-          drum ? (
-            <Drums />
-          ) : guitar ? (
-            <Guitar />
-          ) : bass ? (<Bass />)
-            : singer ? (<Singer />) : (
-              <h1>Click on an icon to see each member</h1>
-            )
-        }</div>
       </div>
     </div>
   )

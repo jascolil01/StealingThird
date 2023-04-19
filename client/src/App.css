@@ -1,15 +1,20 @@
 :root {
-  --background-color: #e9c893;
-  --img-size: 300px;
-  --img-background: #3cc47c;
+  --background-color: #a31621;
+  --one-background: #fcf7f8;
+  --two-background: #ced3dc;
+  --three-background: #4e8098;
+  --four-background: #90c2e7;
+  --img-size: 175px;
+  --border-size: 1000px
 }
 
 .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 20px;
-  background-color: #3cc47c;
+  padding: 10px;
+  background-color: var(--four-background);
+  border-radius: 0 20px 0 20px;
 }
 
 a {
@@ -24,12 +29,12 @@ a {
 }
 
 a:hover {
-  color: #1e392a;
+  color: var(--one-background);
 }
 
 body {
   background-color: var(--background-color);
-  color: #828081;
+  color: var(--two-background);
   text-align: center;
   font-family: 'Raleway', sans-serif;
 }
@@ -39,7 +44,7 @@ body {
   flex-flow: row wrap;
   justify-content: space-around;
   height: 100vh;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .bass,
@@ -54,17 +59,18 @@ body {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
+  border-radius: 100px;
   overflow: hidden;
   transition: 0.2s;
 }
 
 .test:hover {
   color: white;
-  background: #3cc47c;
-  box-shadow: 0 0 20px var(--img-background), 0 0 40px var(--img-background), 0 0 60px var(--img-background), 0 0 80px var(--img-background);
+  background-color: var(--three-background);
+  box-shadow: 0 0 20px var(--three-background), 0 0 40px var(--three-background), 0 0 60px var(--three-background), 0 0 80px var(--three-background);
   transition-delay: 1.25s;
   cursor: pointer;
-  border-radius: 30px;
+  border-radius: 100px;
 }
 
 .test span {
@@ -76,8 +82,8 @@ body {
   top: 0;
   left: -100%;
   width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--img-background));
+  height: var(--border-size);
+  background: linear-gradient(90deg, transparent, var(--three-background));
 }
 
 .test:hover span:nth-child(1) {
@@ -89,8 +95,8 @@ body {
   bottom: 0;
   right: -100%;
   width: 100%;
-  height: 2px;
-  background: linear-gradient(270deg, transparent, var(--img-background));
+  height: var(--border-size);
+  background: linear-gradient(270deg, transparent, var(--three-background));
 }
 
 .test:hover span:nth-child(3) {
@@ -102,9 +108,9 @@ body {
 .test span:nth-child(2) {
   top: -100%;
   right: 0;
-  width: 2px;
+  width: var(--border-size);
   height: 100%;
-  background: linear-gradient(180deg, transparent, var(--img-background));
+  background: linear-gradient(180deg, transparent, var(--three-background));
 }
 
 .test:hover span:nth-child(2) {
@@ -116,13 +122,29 @@ body {
 .test span:nth-child(4) {
   bottom: -100%;
   left: 0;
-  width: 2px;
+  width: var(--border-size);
   height: 100%;
-  background: linear-gradient(360deg, transparent, var(--img-background));
+  background: linear-gradient(360deg, transparent, var(--three-background));
 }
 
 .test:hover span:nth-child(4) {
   bottom: 100%;
   transition: 1s;
   transition-delay: .75s;
+}
+
+.member {
+  margin: 1vh;
+  padding: 1vh;
+  height: fit-content;
+  width: 300px;
+  background-image: linear-gradient(to bottom, var(--three-background), var(--two-background));
+  border-radius: 100px;
+}
+
+.member img {
+  height: 30vh;
+  width: 30vh;
+  border-radius: 200px;
+  border: 2px solid black
 }
