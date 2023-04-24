@@ -37,7 +37,7 @@ export default function About() {
   }
   return (
     <div>
-      <h1>Meet the Members</h1>
+      <h1>Meet the crew</h1>
       <div className="about">
         <div onClick={() => handleClick(1)} className="test">
           <span></span>
@@ -60,7 +60,7 @@ export default function About() {
             <Guitar />
           ) : bass ? (<Bass />)
             : singer ? (<Singer />) : (
-              <h1>Click on an icon to see each member</h1>
+              <h1>Click for the crew</h1>
             )
         }</div>
         <div onClick={() => handleClick(3)} className="test">

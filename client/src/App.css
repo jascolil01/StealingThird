@@ -1,5 +1,5 @@
 :root {
-  --background-color: linear-gradient(to right, #ef233c, #d80032);
+  --background-color: #0061ff;
   --one-background: #fcf7f8;
   --two-background: #ced3dc;
   --three-background: #4e8098;
@@ -8,32 +8,8 @@
   --border-size: 1000px
 }
 
-.navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 10px;
-  background-color: var(--four-background);
-  border-radius: 0 20px 0 20px;
-}
-
-a {
-  margin: 0;
-  text-decoration: none;
-  font-size: 30px;
-  color: transparent;
-  width: fit-content;
-  height: fit-content;
-  transition: .3s;
-  -webkit-text-stroke: .05vw black;
-}
-
-a:hover {
-  color: var(--one-background);
-}
-
 body {
-  background-image: var(--background-color);
+  background-color: var(--background-color);
   color: var(--two-background);
   text-align: center;
   font-family: 'Raleway', sans-serif;
@@ -43,7 +19,9 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  width: fit-content;
   height: 100vh;
+  margin: 5px;
   align-items: flex-start;
 }
 
@@ -53,6 +31,7 @@ body {
 .guitar {
   width: var(--img-size);
   height: var(--img-size);
+  padding: 30px;
 }
 
 .test {
@@ -154,6 +133,7 @@ body {
   flex-direction: row;
   justify-content: space-around;
   margin: 20px;
+  flex-wrap: wrap;
 }
 
 .row1,
@@ -187,4 +167,9 @@ body {
 .fade-exit.fade-exit-active {
   opacity: 0;
   transition: opacity 300ms ease-out;
+}
+
+header {
+  font-size: 15vh;
+  background-color: #4e8098;
 }
