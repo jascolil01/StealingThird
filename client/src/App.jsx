@@ -2,7 +2,7 @@
 import './App.css'
 // import sound from './assets/Recording.wav'
 import Home from './pages/ Home'
-import Merch from './pages/ Merch'
+// import Merch from './pages/ Merch'
 import SetList from './pages/ SetList'
 import About from './pages/About'
 import Guitar from './components/Guitar'
@@ -26,7 +26,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/About' element={<About />} />
-        <Route path='/Merch' element={<Merch />} />
+        {/* <Route path='/Merch' element={<Merch />} /> */}
         <Route path='/SetList' element={<SetList />} />
         <Route path='/Drums' element={<Drums />} />
         <Route path='/Guitar' element={<Guitar />} />
