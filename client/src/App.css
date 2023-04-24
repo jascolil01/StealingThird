@@ -1,9 +1,9 @@
 :root {
-  --background-color: #a31621;
+  --background-color: linear-gradient(to right, #ef233c, #d80032);
   --one-background: #fcf7f8;
   --two-background: #ced3dc;
   --three-background: #4e8098;
-  --four-background: #90c2e7;
+  --four-background: #8D99AE;
   --img-size: 175px;
   --border-size: 1000px
 }
@@ -33,7 +33,7 @@ a:hover {
 }
 
 body {
-  background-color: var(--background-color);
+  background-image: var(--background-color);
   color: var(--two-background);
   text-align: center;
   font-family: 'Raleway', sans-serif;
@@ -147,4 +147,44 @@ body {
   width: 30vh;
   border-radius: 100px;
   border: 2px solid black
+}
+
+.homepage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.row1,
+.row2 {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.home {
+
+  margin: 0;
+  width: 500px;
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
 }
