@@ -155,7 +155,7 @@ header {
   position: relative;
   margin: 0%;
   padding: 0%;
-  font-size: 8em;
+  font-size: 7em;
 }
 
 header span {
@@ -285,6 +285,67 @@ header span:nth-child(14):after {
   color: black;
 }
 
-.showing {
-  border: 1px solid black;
+@media only screen and (max-width: 600px) {
+  :root {
+    --img-size: 120px;
+  }
+
+  .about {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  body {
+    border: none;
+  }
+
+  img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    margin: 10px;
+  }
+
+  .test span:nth-child(1),
+  .test span:nth-child(2),
+  .test span:nth-child(3),
+  .test span:nth-child(4) {
+    width: 0;
+    height: 0;
+  }
+
+  .test:hover {
+    transition-delay: 0s;
+  }
+
+  .bass,
+  .drums,
+  .singer,
+  .guitar {
+    width: 80%;
+    height: auto;
+    margin: 10px 0;
+    padding: 0;
+  }
+
+  .test {
+    font-size: 1.2em;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 40px;
+    margin: 10px
+  }
+
+  .homepage {
+    margin: 10px;
+  }
+
+  .home {
+    width: 100%;
+    font-size: medium;
+  }
+
+  header {
+    font-size: 2em;
+  }
 }
