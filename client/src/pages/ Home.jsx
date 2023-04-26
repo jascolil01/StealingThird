@@ -5,7 +5,6 @@ export default function Home() {
   return (
     <div className="homepage">
       <div className="row1">
-        {/* <h1>Welcome to the Home Page of Stealing Third</h1> */}
         <SetList />
       </div>
       <div className="row2"><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Beatles_ad_1965_just_the_beatles_crop.jpg/640px-Beatles_ad_1965_just_the_beatles_crop.jpg' alt='band photo' />

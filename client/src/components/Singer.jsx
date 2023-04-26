@@ -9,7 +9,6 @@ export default function Singer() {
       <h1>Contact Information</h1>
       <h2>Email</h2>
       <h3><a href='mailto:josh.ascolillo@gmail.com'>fadsasd</a></h3>
-      <div >Go Back</div>
     </div>
   )
 }
