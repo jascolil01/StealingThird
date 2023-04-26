@@ -39,14 +39,14 @@ export default function About() {
     <div>
       <h1>Meet the crew</h1>
       <div className="about">
-        <div onClick={() => handleClick(1)} className="test">
+        <div onClick={() => handleClick(1)} className={bass ? 'test showing' : 'test'}>
           <span></span>
           <span></span>
           <span></span>
           <span></span>
           <img src="https://cdn-icons-png.flaticon.com/512/2884/2884299.png" alt="bass" className="bass" />
         </div>
-        <div onClick={() => handleClick(2)} className="test">
+        <div onClick={() => handleClick(2)} className={drum ? 'test showing' : 'test'}>
           <span></span>
           <span></span>
           <span></span>
@@ -63,14 +63,14 @@ export default function About() {
               <h1>Click for the crew</h1>
             )
         }</div>
-        <div onClick={() => handleClick(3)} className="test">
+        <div onClick={() => handleClick(3)} className={singer ? 'test showing' : 'test'}>
           <span></span>
           <span></span>
           <span></span>
           <span></span>
           <img src="https://cdn-icons-png.flaticon.com/512/3616/3616721.png" alt="singer" className="singer" />
         </div>
-        <div onClick={() => handleClick(4)} className="test">
+        <div onClick={() => handleClick(4)} className={guitar ? 'test showing' : 'test'}>
           <span></span>
           <span></span>
           <span></span>

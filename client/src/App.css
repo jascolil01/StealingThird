@@ -20,7 +20,7 @@ body {
   flex-flow: row wrap;
   justify-content: space-around;
   width: fit-content;
-  height: 100vh;
+  height: fit-content;
   margin: 5px;
   align-items: flex-start;
 }
@@ -121,6 +121,8 @@ body {
   border-radius: 20px 80px 20px 80px;
 }
 
+
+
 .member img {
   height: 30vh;
   width: 30vh;
@@ -133,6 +135,7 @@ body {
   flex-direction: row;
   justify-content: space-around;
   margin: 20px;
+  height: fit-content;
   flex-wrap: wrap;
 }
 
@@ -279,16 +282,9 @@ header span:nth-child(14):after {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: black;
 }
 
-h3 {
-  background-color: #0061ff;
-  border-radius: 20px 80px 20px 80px;
-  width: fit-content;
-  align-self: center;
-}
-
-a {
-  text-decoration: none;
-  color: var(--one-background);
+.showing {
+  border: 1px solid black;
 }
