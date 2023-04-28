@@ -5,7 +5,9 @@
   --three-background: #4e8098;
   --four-background: #8D99AE;
   --img-size: 175px;
-  --border-size: 1000px
+  --img-size-mobile: 100px;
+  --border-size: 1000px;
+  --music-player-size: 250px;
 }
 
 body {
@@ -113,7 +115,7 @@ body {
 }
 
 .member {
-  margin: 1vh;
+  margin: 3vh;
   padding: 1vh;
   height: fit-content;
   width: 300px;
@@ -147,7 +149,7 @@ body {
 }
 
 .home {
-  margin: 0;
+  margin: 20px;
   width: 500px;
 }
 
@@ -285,6 +287,30 @@ header span:nth-child(14):after {
   color: black;
 }
 
+bdi {
+  color: royalblue;
+  transition: 1s;
+}
+
+bdi:hover {
+  color: aqua;
+  font-size: 35px;
+}
+
+.song {
+  background-color: var(--three-background);
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  width: var(--music-player-size);
+  height: var(--music-player-size);
+  transition: 1s;
+}
+
+.song:hover {
+  background-color: bisque;
+}
+
 @media only screen and (max-width: 600px) {
   :root {
     --img-size: 120px;
@@ -322,10 +348,19 @@ header span:nth-child(14):after {
   .drums,
   .singer,
   .guitar {
-    width: 80%;
-    height: auto;
-    margin: 10px 0;
-    padding: 0;
+    width: var(--img-size-mobile);
+    height: var(--img-size-mobile);
+    margin: 0px;
+    padding: 5px;
+  }
+
+  .about {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .about .member {
+    order: 1
   }
 
   .test {
