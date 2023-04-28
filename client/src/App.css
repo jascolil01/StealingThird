@@ -298,17 +298,58 @@ bdi:hover {
 }
 
 .song {
-  background-color: var(--three-background);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 5px;
   margin: 5px;
   border-radius: 10px;
   width: var(--music-player-size);
   height: var(--music-player-size);
-  transition: 1s;
 }
 
-.song:hover {
-  background-color: bisque;
+.TP {
+  background-image: url('https://i.ebayimg.com/images/g/GFIAAOSwi9FiI7hr/s-l1600.png');
+  position: relative;
+}
+
+.TP:hover {
+  transition: 1s;
+  opacity: 0;
+}
+
+
+.GnR {
+  background-image: url('https://cdn.ontourmedia.io/gunsnroses/site_v2/animations/gnr_loop_logo_01.jpg');
+}
+
+.W {
+  background-image: url('https://m.media-amazon.com/images/I/410yvVnkoVL._UF1000,1000_QL80_.jpg');
+}
+
+.STP {
+  background-image: url('https://m.media-amazon.com/images/I/517QPGX90BL._AC_UF1000,1000_QL80_.jpg');
+}
+
+.songInfo {
+  opacity: 0;
+  transition-delay: .1s;
+  z-index: -30;
+}
+
+.songInfo:hover {
+  transition: .5;
+  opacity: 1;
+}
+
+@keyframes please {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 @media only screen and (max-width: 600px) {
