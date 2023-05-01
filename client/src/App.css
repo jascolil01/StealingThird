@@ -148,6 +148,14 @@ body {
   align-items: center;
 }
 
+.setList {
+  /* background-color: aqua; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .home {
   margin: 20px;
   width: 500px;
@@ -196,18 +204,6 @@ header span:after {
   z-index: 9;
   -webkit-text-stroke: 2px rgba(255, 255, 255, .6);
   animation: animate2 1s ease-in-out infinite;
-}
-
-@keyframes animate2 {
-
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(5px, -5px);
-  }
 }
 
 header span:nth-child(1):before,
@@ -301,7 +297,7 @@ bdi:hover {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 5px;
+  /* padding: 5px; */
   margin: 5px;
   border-radius: 10px;
   width: var(--music-player-size);
@@ -311,11 +307,6 @@ bdi:hover {
 .TP {
   background-image: url('https://i.ebayimg.com/images/g/GFIAAOSwi9FiI7hr/s-l1600.png');
   position: relative;
-}
-
-.TP:hover {
-  transition: 1s;
-  opacity: 0;
 }
 
 
@@ -331,25 +322,60 @@ bdi:hover {
   background-image: url('https://m.media-amazon.com/images/I/517QPGX90BL._AC_UF1000,1000_QL80_.jpg');
 }
 
+.songList {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: fit-content;
+}
+
+
 .songInfo {
+  background-color: aquamarine;
+  width: auto;
+  border-radius: 10px;
+  height: 250px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   opacity: 0;
-  transition-delay: .1s;
-  z-index: -30;
+  transition: .5s;
 }
 
 .songInfo:hover {
-  transition: .5;
   opacity: 1;
 }
 
-@keyframes please {
-  0% {
-    opacity: 1;
-  }
+.WM {
+  background-color: #BFC1C2;
+  color: black
+}
 
-  100% {
-    opacity: 0;
-  }
+.SC {
+  background-color: black;
+  color: white
+}
+
+.HP {
+  background-color: #A4BF20;
+  color: black;
+}
+
+.IL {
+  background-color: #507096;
+}
+
+h3 {
+  margin: 0;
+}
+
+button {
+  margin: 5px;
 }
 
 @media only screen and (max-width: 600px) {
