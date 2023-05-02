@@ -1,6 +1,8 @@
 import WreckMe from '../assets/Wreck-Me.wav'
 import SweetChild from '../assets/Sweet-Child.wav'
 import HashPipe from '../assets/Hash-Pipe.wav'
+import Slide from '../assets/Slide.wav'
+import PinkHouses from '../assets/Pink-Houses.wav'
 import InterstateLove from '../assets/Interstate-Love.wav'
 import { useState } from 'react'
 
@@ -20,55 +22,54 @@ export default function SetList() {
   const [interstateLove, setInterstateLove] = useState({
     audio: new Audio(InterstateLove),
   })
-
+  const [slide, setSlide] = useState({
+    audio: new Audio(Slide),
+  })
+  const [pinkHouses, setPinkHouses] = useState({
+    audio: new Audio(PinkHouses),
+  })
 
   function playPause(x) {
-    if (x == 1) {
-      if (isPlaying) {
-        wreckMe.audio.pause()
-        setIsPlaying(false)
-        setBandName('')
-        setSongTitle('')
-      } else {
+    if (isPlaying) {
+      wreckMe.audio.pause()
+      sweetChild.audio.pause()
+      hashPipe.audio.pause()
+      interstateLove.audio.pause()
+      slide.audio.pause()
+      pinkHouses.audio.pause()
+      setIsPlaying(false)
+      setBandName('')
+      setSongTitle('')
+    } else {
+      if (x === 1) {
         wreckMe.audio.play()
         setSongTitle('Wreck Me')
         setBandName('Tom Petty')
         setIsPlaying(true)
-      }
-    } else if (x === 2) {
-      if (isPlaying) {
-        sweetChild.audio.pause()
-        setIsPlaying(false)
-        setBandName('')
-        setSongTitle('')
-      } else {
+      } else if (x === 2) {
         sweetChild.audio.play()
         setSongTitle("Sweet Child O' Mine")
         setBandName(`Guns N' Rose`)
         setIsPlaying(true)
-      }
-    } else if (x === 3) {
-      if (isPlaying) {
-        hashPipe.audio.pause()
-        setIsPlaying(false)
-        setBandName('')
-        setSongTitle('')
-      } else {
+      } else if (x === 3) {
         hashPipe.audio.play()
         setSongTitle("Hash Pipe")
         setBandName(`Weezer`)
         setIsPlaying(true)
-      }
-    } else if (x === 4) {
-      if (isPlaying) {
-        interstateLove.audio.pause()
-        setIsPlaying(false)
-        setBandName('')
-        setSongTitle('')
-      } else {
+      } else if (x === 4) {
         interstateLove.audio.play()
         setSongTitle("Interstate Love")
         setBandName(`Stone Temple Pilots`)
+        setIsPlaying(true)
+      } else if (x === 5) {
+        slide.audio.play()
+        setSongTitle("Slide")
+        setBandName(`Goo Goo Dolls`)
+        setIsPlaying(true)
+      } else if (x === 6) {
+        pinkHouses.audio.play()
+        setSongTitle("Pink Houses")
+        setBandName(`John Mellencamp`)
         setIsPlaying(true)
       }
     }
@@ -135,6 +136,22 @@ export default function SetList() {
             <h3>Orignial song by Stone Temple Pilots</h3>
             <button onClick={() => playPause(4)}>Play | Pause</button>
             <button onClick={() => restart(4)}>Restart</button>
+          </div>
+        </div>
+        <div className="song GGD">
+          <div className="songInfo S">
+            <h2> Slide Cover</h2>
+            <h3>Orignial song by Goo Goo Dolls</h3>
+            <button onClick={() => playPause(5)}>Play | Pause</button>
+            <button onClick={() => restart(5)}>Restart</button>
+          </div>
+        </div>
+        <div className="song JM">
+          <div className="songInfo PH">
+            <h2> Pink Houses Cover</h2>
+            <h3>Orignial song by John Mellencamp</h3>
+            <button onClick={() => playPause(6)}>Play | Pause</button>
+            <button onClick={() => restart(6)}>Restart</button>
           </div>
         </div>
       </div>

@@ -17,6 +17,8 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+/* for about page animation /////////////////////////////////////////////////////////////////////////// */
+
 .about {
   display: flex;
   flex-flow: row wrap;
@@ -123,14 +125,14 @@ body {
   border-radius: 20px 80px 20px 80px;
 }
 
-
-
 .member img {
   height: 30vh;
   width: 30vh;
   border-radius: 100px;
   border: 2px solid black
 }
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .homepage {
   display: flex;
@@ -149,7 +151,6 @@ body {
 }
 
 .setList {
-  /* background-color: aqua; */
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -160,6 +161,8 @@ body {
   margin: 20px;
   width: 500px;
 }
+
+/* for animated header DO NOT TOUCH ///////////////////////////////////////////////////////////// */
 
 header {
   position: relative;
@@ -198,12 +201,6 @@ header span:before {
   50% {
     transform: translate(10px, -10px);
   }
-}
-
-header span:after {
-  z-index: 9;
-  -webkit-text-stroke: 2px rgba(255, 255, 255, .6);
-  animation: animate2 1s ease-in-out infinite;
 }
 
 header span:nth-child(1):before,
@@ -276,6 +273,8 @@ header span:nth-child(14):after {
   animation-delay: 1.3s;
 }
 
+/* ////////////////////////////////////////////////////////////////////////////////////////// */
+
 .info {
   display: flex;
   flex-direction: column;
@@ -283,21 +282,40 @@ header span:nth-child(14):after {
   color: black;
 }
 
-bdi {
-  color: royalblue;
-  transition: 1s;
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
+  font-size: 60px;
 }
 
-bdi:hover {
-  color: aqua;
-  font-size: 35px;
+.waviy span {
+  position: relative;
+  display: inline-block;
+  animation: waviy 1s ease-in-out infinite;
+}
+
+.waviy span:nth-child(4):before,
+.waviy span:nth-child(4):after {
+  animation-delay: .2s;
+}
+
+@keyframes waviy {
+
+  0%,
+  40%,
+  100% {
+    transform: translateY(0)
+  }
+
+  20% {
+    transform: translateY(-20px)
+  }
 }
 
 .song {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  /* padding: 5px; */
   margin: 5px;
   border-radius: 10px;
   width: var(--music-player-size);
@@ -322,6 +340,14 @@ bdi:hover {
   background-image: url('https://m.media-amazon.com/images/I/517QPGX90BL._AC_UF1000,1000_QL80_.jpg');
 }
 
+.GGD {
+  background-image: url('https://upload.wikimedia.org/wikipedia/en/e/e5/Goo_Goo_Dolls_-_Dizzy_Up_the_Girl.png');
+}
+
+.JM {
+  background-image: url('https://images.genius.com/447148b3efbd6a72443251f740944bf4.1000x1000x1.jpg');
+}
+
 .songList {
   margin: 10px;
   display: flex;
@@ -333,7 +359,6 @@ bdi:hover {
 
 
 .songInfo {
-  background-color: aquamarine;
   width: auto;
   border-radius: 10px;
   height: 250px;
@@ -368,6 +393,15 @@ bdi:hover {
 
 .IL {
   background-color: #507096;
+}
+
+.S {
+  background-color: white;
+  color: black
+}
+
+.PH {
+  background-color: #885962;
 }
 
 h3 {
@@ -449,5 +483,26 @@ button {
 
   header {
     font-size: 2em;
+  }
+
+  .song {
+    /* background-image:; */
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .songInfo {
+    /* opacity: 1; */
+    width: 150px;
+    height: 150px;
+  }
+
+  h2,
+  h3 {
+    font-size: 10px;
+  }
+
+  button {
+    font-size: 10px;
   }
 }
