@@ -38,46 +38,55 @@ export default function About() {
   return (
     <div>
       <h1>Meet the crew</h1>
-      <div className="about">
-        <div onClick={() => handleClick(1)} className='test'>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <img src="https://cdn-icons-png.flaticon.com/512/2884/2884299.png" alt="bass" className="bass" />
+      <div className='mrStark'>
+        <div className="about">
+          <div onClick={() => handleClick(1)} className='test'>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <img src="https://cdn-icons-png.flaticon.com/512/2884/2884299.png" alt="bass" className="bass" />
+          </div>
+          <div onClick={() => handleClick(2)} className='test'>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <img src="https://cdn-icons-png.flaticon.com/512/92/92997.png" alt="drums" className="drums" />
+          </div>
         </div>
-        <div onClick={() => handleClick(2)} className='test'>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <img src="https://cdn-icons-png.flaticon.com/512/92/92997.png" alt="drums" className="drums" />
-        </div>
-        <div className="member">{
-          drum ? (
-            <Drums />
-          ) : guitar ? (
-            <Guitar />
-          ) : bass ? (<Bass />)
-            : singer ? (<Singer />) : (
-              <h1>Click for the crew</h1>
-            )
-        }</div>
-        <div onClick={() => handleClick(3)} className='test'>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <img src="https://cdn-icons-png.flaticon.com/512/3616/3616721.png" alt="singer" className="singer" />
-        </div>
-        <div onClick={() => handleClick(4)} className='test'>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <img src="https://i.imgur.com/krcbEPd.png" alt="guitar" className="guitar" />
+        <div>
+          {
+            drum ? (<div className="member">
+              <Drums /></div>
+            ) : guitar ? (
+              <div className="member">
+                <Guitar /></div>
+            ) : bass ? (
+              <div className="member"><Bass /></div>)
+              : singer ? (
+                <div className="member"><Singer /></div>)
+                : (
+                  <div className="member blank"></div>
+                )
+          }</div>
+        <div className="about">
+          <div onClick={() => handleClick(3)} className='test'>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <img src="https://cdn-icons-png.flaticon.com/512/3616/3616721.png" alt="singer" className="singer" />
+          </div>
+          <div onClick={() => handleClick(4)} className='test'>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <img src="https://i.imgur.com/krcbEPd.png" alt="guitar" className="guitar" />
+          </div>
         </div>
       </div>
-    </div>
+    </div >
   )
 }

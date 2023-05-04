@@ -1,18 +1,18 @@
 :root {
-  --background-color: #0061ff;
-  --one-background: #fcf7f8;
-  --two-background: #ced3dc;
-  --three-background: #4e8098;
-  --four-background: #8D99AE;
+  --background-color: #f7f3e9;
+  --one-background: #84ceeb;
+  --two-background: #5ab9ea;
+  --three-background: #c1c8e4;
+  --four-background: #8860d0;
   --img-size: 175px;
   --img-size-mobile: 100px;
-  --border-size: 1000px;
+  --border-size: 500px;
   --music-player-size: 250px;
 }
 
 body {
   background-color: var(--background-color);
-  color: var(--two-background);
+  color: var(--four-background);
   text-align: center;
   font-family: 'Raleway', sans-serif;
 }
@@ -21,12 +21,15 @@ body {
 
 .about {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+  flex-flow: column wrap;
+  justify-content: center;
   width: fit-content;
   height: fit-content;
-  margin: 5px;
-  align-items: flex-start;
+  align-items: center;
+}
+
+.mrStark {
+  display: flex;
 }
 
 .bass,
@@ -35,7 +38,7 @@ body {
 .guitar {
   width: var(--img-size);
   height: var(--img-size);
-  padding: 30px;
+  padding: 20px;
 }
 
 .test {
@@ -119,10 +122,11 @@ body {
 .member {
   margin: 3vh;
   padding: 1vh;
-  height: fit-content;
+  height: 620px;
   width: 300px;
   background-image: linear-gradient(to bottom, var(--three-background), var(--two-background));
   border-radius: 20px 80px 20px 80px;
+  transition: 1s;
 }
 
 .member img {
@@ -138,7 +142,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 20px;
+  margin: 10px;
   height: fit-content;
   flex-wrap: wrap;
 }
@@ -151,10 +155,12 @@ body {
 }
 
 .setList {
-  height: 100vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  padding: 10px;
+  margin: 50px;
+  /* justify-content: space-around; */
 }
 
 .home {
@@ -174,7 +180,7 @@ header {
 header span {
   position: relative;
   color: transparent;
-  -webkit-text-stroke: 2px rgba(255, 255, 255, .2)
+  -webkit-text-stroke: 2px var(--four-background)
 }
 
 header span:before,
@@ -187,7 +193,7 @@ header span:after {
 
 header span:before {
   z-index: 10;
-  -webkit-text-stroke: 2px rgba(255, 255, 255, 1);
+  -webkit-text-stroke: 1px var(--four-background);
   animation: animate1 1s ease-in-out infinite;
 }
 
@@ -282,34 +288,23 @@ header span:nth-child(14):after {
   color: black;
 }
 
-.waviy {
+a {
   position: relative;
-  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
-  font-size: 60px;
-}
-
-.waviy span {
+  font-size: 30px;
   position: relative;
   display: inline-block;
-  animation: waviy 1s ease-in-out infinite;
+  text-decoration: none;
+  transition: .3s;
 }
 
-.waviy span:nth-child(4):before,
-.waviy span:nth-child(4):after {
-  animation-delay: .2s;
+a:hover {
+  font-size: 35px;
+  color: var(--two-background)
 }
 
-@keyframes waviy {
-
-  0%,
-  40%,
-  100% {
-    transform: translateY(0)
-  }
-
-  20% {
-    transform: translateY(-20px)
-  }
+.bp {
+  width: 600px;
+  border-radius: 100px;
 }
 
 .song {
@@ -360,6 +355,7 @@ header span:nth-child(14):after {
 
 .songInfo {
   width: auto;
+  color: antiquewhite;
   border-radius: 10px;
   height: 250px;
   margin: 0;
@@ -370,6 +366,14 @@ header span:nth-child(14):after {
   align-items: center;
   opacity: 0;
   transition: .5s;
+}
+
+.blank {
+  opacity: 0;
+  transition: 1s;
+  width: 0px;
+  height: 0;
+  margin: 0;
 }
 
 .songInfo:hover {
