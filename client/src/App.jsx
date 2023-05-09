@@ -21,6 +21,7 @@ function App() {
         <span data-text='D'>D</span>
       </header>
       <Home />
+      <footer>Test</footer>
     </div>
   )
 }

@@ -101,10 +101,12 @@ export default function SetList() {
   return (
     <div className='setList'>
       <h1>Set List</h1>
-      <p>
-        {isPlaying ?
-          `${songTitle} by ${bandName} is playing` :
-          "No songs playing"}
+      <p className='kratos'>
+        <p className="atreus">
+          {isPlaying ?
+            `${songTitle} by ${bandName} is playing` :
+            "No songs playing"}
+        </p>
       </p>
       <div className="songList">
         <div className="song TP">

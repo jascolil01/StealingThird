@@ -4,16 +4,27 @@
   --two-background: #5ab9ea;
   --three-background: #c1c8e4;
   --four-background: #8860d0;
+  --test: linear-gradient(to right, var(--four-background), blue);
+  --header-footer-color: black;
   --img-size: 175px;
   --img-size-mobile: 100px;
   --border-size: 500px;
   --music-player-size: 250px;
 }
 
-body {
+* {
+  margin: 0%;
+  padding: 0;
+}
+
+html {
   background-color: var(--background-color);
+}
+
+.App {
   color: var(--four-background);
   text-align: center;
+  height: 300vh;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -30,6 +41,7 @@ body {
 
 .mrStark {
   display: flex;
+  justify-content: center;
 }
 
 .bass,
@@ -140,11 +152,10 @@ body {
 
 .homepage {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 10px;
-  height: fit-content;
-  flex-wrap: wrap;
+  height: 100%;
 }
 
 .row1,
@@ -154,13 +165,16 @@ body {
   align-items: center;
 }
 
+.row1 {
+  height: 30%;
+}
+
 .setList {
   height: fit-content;
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  margin: 50px;
-  /* justify-content: space-around; */
+  justify-content: center;
+  align-items: center;
 }
 
 .home {
@@ -171,6 +185,7 @@ body {
 /* for animated header DO NOT TOUCH ///////////////////////////////////////////////////////////// */
 
 header {
+  background-color: var(--header-footer-color);
   position: relative;
   margin: 0%;
   padding: 0%;
@@ -344,12 +359,12 @@ a:hover {
 }
 
 .songList {
-  margin: 10px;
+  padding: 10px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
   height: fit-content;
+  width: 50%;
 }
 
 
@@ -400,7 +415,7 @@ a:hover {
 }
 
 .S {
-  background-color: white;
+  background-color: #94686f;
   color: black
 }
 
@@ -414,6 +429,29 @@ h3 {
 
 button {
   margin: 5px;
+}
+
+footer {
+  padding: 0%;
+  margin: 0;
+  width: 100%;
+  height: 20vh;
+  background-color: var(--header-footer-color);
+}
+
+p {
+  padding: 6px;
+  background-image: var(--test);
+  border-radius: 20px;
+  height: fit-content;
+  width: fit-content;
+}
+
+.atreus {
+  background-image: none;
+  background-color: black;
+  width: 200px;
+  height: 50px;
 }
 
 @media only screen and (max-width: 600px) {
