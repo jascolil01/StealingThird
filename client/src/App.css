@@ -8,7 +8,7 @@
   --header-footer-color: black;
   --img-size: 175px;
   --img-size-mobile: 100px;
-  --border-size: 120px;
+  --border-size: 280px;
   --music-player-size: 250px;
 }
 
@@ -46,6 +46,7 @@ html {
 .mrStark {
   display: flex;
   justify-content: center;
+  padding: 40px;
 }
 
 .bass,
@@ -199,7 +200,7 @@ header {
 header span {
   position: relative;
   color: transparent;
-  -webkit-text-stroke: 2px var(--four-background)
+  /* -webkit-text-stroke: 2px var(--four-background) */
 }
 
 header span:before,
@@ -212,7 +213,7 @@ header span:after {
 
 header span:before {
   z-index: 10;
-  -webkit-text-stroke: 1px var(--four-background);
+  -webkit-text-stroke: 5px var(--four-background);
   animation: animate1 1s ease-in-out infinite;
 }
 
@@ -460,7 +461,16 @@ p {
 
 @media only screen and (max-width: 600px) {
   :root {
-    --img-size: 120px;
+    --img-size: 200px;
+    --bp-img: 400px;
+  }
+
+  .App {
+    width: 100%;
+  }
+
+  footer {
+    opacity: 0;
   }
 
   .about {
@@ -472,12 +482,7 @@ p {
     border: none;
   }
 
-  img {
-    width: 300px;
-    height: 300px;
-    border-radius: 20px;
-    margin: 10px;
-  }
+
 
   .test span:nth-child(1),
   .test span:nth-child(2),
@@ -489,6 +494,15 @@ p {
 
   .test:hover {
     transition-delay: 0s;
+  }
+
+  .row2 {
+    width: 100%
+  }
+
+  .bp {
+    width: var(--bp-img);
+    height: var(--bp-img);
   }
 
   .bass,
@@ -506,9 +520,7 @@ p {
     flex-wrap: wrap;
   }
 
-  .about .member {
-    order: 1
-  }
+
 
   .test {
     font-size: 1.2em;
@@ -523,7 +535,7 @@ p {
   }
 
   .home {
-    width: 100%;
+    width: 50%;
     font-size: medium;
   }
 
@@ -532,13 +544,11 @@ p {
   }
 
   .song {
-    /* background-image:; */
     width: fit-content;
     height: fit-content;
   }
 
   .songInfo {
-    /* opacity: 1; */
     width: 150px;
     height: 150px;
   }
@@ -550,5 +560,39 @@ p {
 
   button {
     font-size: 10px;
+  }
+
+  .songList {
+    width: 90%;
+    height: 60%;
+  }
+
+  .mrStark {
+    width: 90%;
+    display: flex;
+    padding: 0;
+  }
+
+  .mrStark .adtr {
+    order: 1;
+    font-size: 10px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  .crew {
+    width: fit-content;
+  }
+
+  .member {
+    height: fit-content;
+    width: fit-content;
+  }
+
+  .member img {
+    height: var(--img-size);
+    width: var(--img-size)
   }
 }

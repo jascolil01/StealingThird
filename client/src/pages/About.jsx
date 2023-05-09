@@ -36,7 +36,7 @@ export default function About() {
     }
   }
   return (
-    <div>
+    <div className='crew'>
       <h1>Meet the crew</h1>
       <div className='mrStark'>
         <div className="about">
@@ -55,7 +55,7 @@ export default function About() {
             <img src="https://cdn-icons-png.flaticon.com/512/92/92997.png" alt="drums" className="drums" />
           </div>
         </div>
-        <div>
+        <div className='adtr'>
           {
             drum ? (<div className="member">
               <Drums /></div>
