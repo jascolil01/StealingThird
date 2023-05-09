@@ -2,13 +2,13 @@
   --background-color: #f7f3e9;
   --one-background: #84ceeb;
   --two-background: #5ab9ea;
-  --three-background: #c1c8e4;
+  --four-background: #a029b8;
   --four-background: #8860d0;
   --test: linear-gradient(to right, var(--four-background), blue);
   --header-footer-color: black;
   --img-size: 175px;
   --img-size-mobile: 100px;
-  --border-size: 500px;
+  --border-size: 120px;
   --music-player-size: 250px;
 }
 
@@ -18,13 +18,17 @@
 }
 
 html {
-  background-color: var(--background-color);
+  background-image: linear-gradient(to top, var(--four-background), var(--one-background), var(--two-background));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 280%;
 }
 
 .App {
   color: var(--four-background);
   text-align: center;
-  height: 300vh;
+  height: 250vh;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -64,9 +68,9 @@ html {
 
 .test:hover {
   color: white;
-  background-color: var(--three-background);
-  box-shadow: 0 0 20px var(--three-background), 0 0 40px var(--three-background), 0 0 60px var(--three-background), 0 0 80px var(--three-background);
-  transition-delay: 1.25s;
+  background-color: var(--four-background);
+  box-shadow: 0 0 20px var(--four-background), 0 0 40px var(--four-background), 0 0 60px var(--four-background), 0 0 80px var(--four-background);
+  transition-delay: .3s;
   cursor: pointer;
   border-radius: 100px;
 }
@@ -81,7 +85,7 @@ html {
   left: -100%;
   width: 100%;
   height: var(--border-size);
-  background: linear-gradient(90deg, transparent, var(--three-background));
+  background: linear-gradient(90deg, transparent, var(--four-background));
 }
 
 .test:hover span:nth-child(1) {
@@ -94,13 +98,13 @@ html {
   right: -100%;
   width: 100%;
   height: var(--border-size);
-  background: linear-gradient(270deg, transparent, var(--three-background));
+  background: linear-gradient(270deg, transparent, var(--four-background));
 }
 
 .test:hover span:nth-child(3) {
   right: 100%;
   transition: 1s;
-  transition-delay: 0.5s;
+  /* transition-delay: 0.5s; */
 }
 
 .test span:nth-child(2) {
@@ -108,13 +112,13 @@ html {
   right: 0;
   width: var(--border-size);
   height: 100%;
-  background: linear-gradient(180deg, transparent, var(--three-background));
+  background: linear-gradient(180deg, transparent, var(--four-background));
 }
 
 .test:hover span:nth-child(2) {
   top: 100%;
   transition: 1s;
-  transition-delay: .25s;
+  /* transition-delay: .25s; */
 }
 
 .test span:nth-child(4) {
@@ -122,13 +126,13 @@ html {
   left: 0;
   width: var(--border-size);
   height: 100%;
-  background: linear-gradient(360deg, transparent, var(--three-background));
+  background: linear-gradient(360deg, transparent, var(--four-background));
 }
 
 .test:hover span:nth-child(4) {
   bottom: 100%;
   transition: 1s;
-  transition-delay: .75s;
+  /* transition-delay: .75s; */
 }
 
 .member {
@@ -136,7 +140,7 @@ html {
   padding: 1vh;
   height: 620px;
   width: 300px;
-  background-image: linear-gradient(to bottom, var(--three-background), var(--two-background));
+  background-image: linear-gradient(to bottom, var(--four-background), var(--two-background));
   border-radius: 20px 80px 20px 80px;
   transition: 1s;
 }
