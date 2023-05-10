@@ -2,6 +2,7 @@ import Drums from '../components/Drums'
 import Bass from '../components/Bass'
 import Singer from '../components/Singer'
 import Guitar from '../components/Guitar'
+import Guitar2 from '../components/Guitar2'
 import { useState, useEffect } from "react";
 
 export default function About() {
@@ -9,6 +10,7 @@ export default function About() {
   const [drum, setDrum] = useState(false)
   const [singer, setSinger] = useState(false)
   const [guitar, setGuitar] = useState(false)
+  const [guitar2, setGuitar2] = useState(false)
   const [bass, setBass] = useState(false)
 
 
@@ -18,20 +20,30 @@ export default function About() {
       setDrum(false)
       setGuitar(false)
       setSinger(false)
+      setGuitar2(false)
     } else if (x === 2) {
       setBass(false)
       setDrum((current) => !current)
       setGuitar(false)
       setSinger(false)
+      setGuitar2(false)
     } else if (x === 3) {
       setBass(false)
       setDrum(false)
       setGuitar(false)
+      setGuitar2(false)
       setSinger((current) => !current)
     } else if (x === 4) {
       setBass(false)
       setDrum(false)
       setGuitar((current) => !current)
+      setSinger(false)
+      setGuitar2(false)
+    } else if (x === 5) {
+      setBass(false)
+      setDrum(false)
+      setGuitar(false)
+      setGuitar2((current) => !current)
       setSinger(false)
     }
   }
@@ -62,6 +74,9 @@ export default function About() {
             ) : guitar ? (
               <div className="member">
                 <Guitar /></div>
+            ) : guitar2 ? (
+              <div className="member">
+                <Guitar2 /></div>
             ) : bass ? (
               <div className="member"><Bass /></div>)
               : singer ? (
@@ -79,6 +94,13 @@ export default function About() {
             <img src="https://cdn-icons-png.flaticon.com/512/3616/3616721.png" alt="singer" className="singer" />
           </div>
           <div onClick={() => handleClick(4)} className='test'>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <img src="https://i.imgur.com/krcbEPd.png" alt="guitar" className="guitar" />
+          </div>
+          <div onClick={() => handleClick(5)} className='test'>
             <span></span>
             <span></span>
             <span></span>

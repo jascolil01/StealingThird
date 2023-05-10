@@ -7,7 +7,7 @@
   --test: linear-gradient(to right, var(--four-background), blue);
   --header-footer-color: black;
   --img-size: 175px;
-  --img-size-mobile: 100px;
+  --img-size-mobile: 70px;
   --border-size: 280px;
   --music-player-size: 250px;
 }
@@ -324,7 +324,7 @@ a:hover {
 
 .bp {
   width: 600px;
-  border-radius: 100px;
+  border-radius: 10px;
 }
 
 .song {
@@ -462,15 +462,25 @@ p {
 @media only screen and (max-width: 600px) {
   :root {
     --img-size: 200px;
-    --bp-img: 400px;
+    --bp-img: 350px;
   }
 
   .App {
     width: 100%;
+    height: 280vh;
+  }
+
+  html {
+    height: 350vh;
+    /* background-image: none; */
+    /* background-size: contain; */
+    /* background: content-box; */
   }
 
   footer {
     opacity: 0;
+    height: 0;
+    width: 0%;
   }
 
   .about {
@@ -481,8 +491,6 @@ p {
   body {
     border: none;
   }
-
-
 
   .test span:nth-child(1),
   .test span:nth-child(2),
@@ -503,6 +511,7 @@ p {
   .bp {
     width: var(--bp-img);
     height: var(--bp-img);
+    border-radius: 5px;
   }
 
   .bass,
@@ -523,19 +532,27 @@ p {
 
 
   .test {
-    font-size: 1.2em;
-    padding: 8px 16px;
+    width: fit-content;
+    height: fit-content;
     border: none;
-    border-radius: 40px;
-    margin: 10px
   }
 
   .homepage {
     margin: 10px;
   }
 
+  .crew {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .home {
-    width: 50%;
+    width: 90%;
+    margin: 0%;
+    margin-top: 20px;
     font-size: medium;
   }
 
@@ -553,7 +570,6 @@ p {
     height: 150px;
   }
 
-  h2,
   h3 {
     font-size: 10px;
   }
@@ -570,12 +586,19 @@ p {
   .mrStark {
     width: 90%;
     display: flex;
+    flex-direction: column;
     padding: 0;
   }
 
+  .about {
+    margin: 0%;
+    align-self: center;
+    width: fit-content;
+  }
+
   .mrStark .adtr {
-    order: 1;
     font-size: 10px;
+    order: 6
   }
 
   h2 {
@@ -584,15 +607,45 @@ p {
 
   .crew {
     width: fit-content;
+    justify-content: center;
+    align-items: center;
   }
 
   .member {
+    /* display: flex; */
     height: fit-content;
     width: fit-content;
+    transition: opacity 0.5s ease-in;
+    transition-delay: .1s;
+    margin: 0;
+    margin-top: 40px;
+  }
+
+  .adtr {
+    align-self: center;
+  }
+
+  .info {
+    transition-delay: 1s;
+    align-self: center;
   }
 
   .member img {
     height: var(--img-size);
-    width: var(--img-size)
+    width: var(--img-size);
+  }
+
+  header {
+    padding: 5px 0 0 0;
+  }
+
+  h1 {
+    padding: 20px;
+  }
+
+  header span:before {
+    z-index: 10;
+    -webkit-text-stroke: 1px var(--four-background);
+    animation: animate1 2s ease-in-out infinite;
   }
 }
