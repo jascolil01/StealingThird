@@ -462,7 +462,7 @@ p {
 @media only screen and (max-width: 600px) {
   :root {
     --img-size: 200px;
-    --bp-img: 350px;
+    --bp-img: 270px;
   }
 
   .App {
@@ -471,7 +471,7 @@ p {
   }
 
   html {
-    height: 350vh;
+    height: 300vh;
     /* background-image: none; */
     /* background-size: contain; */
     /* background: content-box; */
@@ -601,6 +601,11 @@ p {
     order: 6
   }
 
+  .mrStark {
+    height: 100%;
+    justify-content: flex-start;
+  }
+
   h2 {
     font-size: 15px;
   }
@@ -609,6 +614,7 @@ p {
     width: fit-content;
     justify-content: center;
     align-items: center;
+    height: 820px;
   }
 
   .member {
@@ -647,5 +653,9 @@ p {
     z-index: 10;
     -webkit-text-stroke: 1px var(--four-background);
     animation: animate1 2s ease-in-out infinite;
+  }
+
+  .setList {
+    margin-bottom: 20px;
   }
 }
